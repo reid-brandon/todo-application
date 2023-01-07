@@ -12,11 +12,9 @@ import {Todo} from './models/todo.model';
 
 const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
-  // const [todos, setTodos] = useState<Todo[]>(JSON.parse(window.localStorage.getItem('todos')!));
 
   useEffect(() => {
     const todosStorage:Todo[] = JSON.parse(window.localStorage.getItem('todos')!);
-
 
     if (todosStorage && todosStorage instanceof Array && todosStorage.length > 0) {
       setTodos(todosStorage);
@@ -47,7 +45,6 @@ const App: React.FC = () => {
     setTodos(prevTodos => {
       return prevTodos.map((todo) => {
         if (todo.id === todoId) {
-          console.log("Updated: ", todo);
           return {id: todoId, text: newTodoText, completed: todo.completed, editing: false};
         } else {
           return todo;
@@ -60,7 +57,6 @@ const App: React.FC = () => {
     setTodos(prevTodos => {
       return prevTodos.map((todo) => {
         if (todo.id === todoId) {
-          console.log("Editing: ", todo);
           return {id: todoId, text: todo.text, completed: todo.completed, editing: true};
         } else {
           return todo;
@@ -73,8 +69,6 @@ const App: React.FC = () => {
     setTodos(prevTodos => {
       return prevTodos.map((todo) => {
         if (todo.id === todoId) {
-          console.log("Completed: ", todo);
-          // return {id: todoId, text: todo.text, completed: true, editing: false};
           return {id: todoId, text: todo.text, completed: !todo.completed, editing: false};
         } else {
           return todo;
