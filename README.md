@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+## Todo Application using React and TypeScript
+
+This project used Create React App to create initial template code (see below). The remainder of the code was mine, in the sense of the actual Todo application.
+
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
