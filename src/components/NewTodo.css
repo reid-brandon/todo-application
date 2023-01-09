@@ -4,44 +4,36 @@ form {
   margin: 2rem auto;
 }
 
-.form-control {
+.form-control-update {
   margin-bottom: 1rem;
 }
 
-label, input {
-  display: block;
-  width: 100%;
+.form-control {
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26) !important;
+  border-radius: 6px !important;
+  padding-top: 20px;
 }
-
 label {
-  font-weight: bold;
+  font-weight: normal;
 }
 
 input {
   font: inherit;
   border: 1px solid #ccc;
   padding: 0.25rem;
+  width: 90%;
+}
+.input-padding-new-todo {
+  width: 80%;
+  margin: 20px 15px 50px 45px;
+}
+.input-padding-update-todo {
+  width: 80%;
+  margin: 15px 40px 5px 40px;
 }
 
 input:focus {
   outline: none;
   border-color: #50005a;
-}
-
-button {
-  background: #50005a;
-  border: 1px solid #50005a;
-  color: white;
-  padding: 0.5rem 1.5rem;
-  cursor: pointer;
-}
-
-button:focus {
-  outline: none;
-}
-
-button:hover,
-button:active {
-  background: #6a0a77;
-  border-color: #6a0a77;
 }
