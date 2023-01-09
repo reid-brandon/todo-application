@@ -1,6 +1,6 @@
 ## Todo Application using React and TypeScript
 
-This project used Create React App to create initial template code (see below). The remainder of the code was mine, in the sense of the actual Todo application.
+This project used Create React App to create initial template code (see below). The To do application has the ability to add, delete, and edit to do's (tasks); as well as marking tasks as complete.
 
 
 
