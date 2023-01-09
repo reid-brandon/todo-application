@@ -1,5 +1,9 @@
 import React, {useRef} from 'react';
 import './NewTodo.css';
+import Tooltip from '@mui/material/Tooltip';
+import Card from '@mui/material/Card';
+import AddIcon from '@mui/icons-material/Add';
+import IconButton from '@mui/material/IconButton';
 
 interface NewTodoProps {
   onAddTodo: (todoText: string) => void;
@@ -28,12 +32,18 @@ const NewTodo: React.FC<NewTodoProps> = (props) => {
   };
 
   return (
-    <form onSubmit={todoSubmitHandler}>
-      <div className="form-control">
-        <label htmlFor="todo-text">Todo Text</label>
-        <input type="text" id="todo-text" ref={textInputRef} />
-      </div>
-      <button type="submit">ADD TODO</button>
+    <form onSubmit={todoSubmitHandler} >
+      <Card className="form-control">
+        <div>
+          <label htmlFor="todo-text"></label>
+          <input type="text" className="input-padding-new-todo" id="todo-text" ref={textInputRef} placeholder="Add a new task" />
+          <Tooltip title="Add To Do to List">
+            <IconButton type="submit" color="primary">
+              <AddIcon />
+            </IconButton>
+          </Tooltip>
+        </div>
+      </Card>
     </form>
   );
 }

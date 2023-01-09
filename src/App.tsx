@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react';
 import TodoList from './components/TodoList';
 import NewTodo from './components/NewTodo';
 import './App.css';
-
 import {Todo} from './models/todo.model';
+import Typography from '@mui/material/Typography';
 
 /**
  * 
@@ -79,7 +79,9 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
+      <Typography variant="h5"><strong>Simple To Do</strong></Typography>
       <NewTodo onAddTodo={todoAddHandler} />
+      <Typography variant="h6"><strong>Current To Do List</strong></Typography>
       <TodoList
         items={todos}
         onUpdateTodo={todoUpdateHandler}
