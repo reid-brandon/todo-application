@@ -8,6 +8,7 @@ import PendingIcon from '@mui/icons-material/Pending';
 import EditIcon from '@mui/icons-material/Edit';
 import IconButton from '@mui/material/IconButton';
 import Stack from '@mui/material/Stack';
+import './TodoItem.css';
 
 interface TodoItemProps {
   todoItem: Todo;
@@ -35,8 +36,8 @@ const TodoItem: React.FC<TodoItemProps> = (props) => {
 
   return (
     <li className={props.todoItem.completed ? 'completed' : ''}>
-      <span>{props.todoItem.text}</span>
-      {props.todoItem.completed && <span>Completed <span style={{fontSize: '20px'}}>&#127881;</span></span>}
+      <span className={"todo-text-span"}>{props.todoItem.text}</span>
+      {props.todoItem.completed && <span>Completed<span style={{fontSize: '20px'}}>&#127881;</span></span>}
       <Stack spacing={1} direction="row">
         <Tooltip title="Edit">
           <IconButton onClick={props.onEditModeTodo.bind(null, props.todoItem.id)} color="primary" >
